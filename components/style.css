@@ -3,7 +3,33 @@
     margin: 0;
     padding: 0;
     text-decoration: none;
+    list-style: none;
+    font-family: 'Cairo', sans-serif;
+    font-size: 1.6rem;
 }
+
+:root {
+    font-size: 62.5%;
+
+    --primary-text-color: #141619;
+    --light-blue: #E6EBF3;
+    --purple:  #E0D6FF;
+
+    --border-radius: 6px;
+}
+
+h2 {
+    font-weight: 600;
+    font-size: 3.0rem;
+}
+
+h3 {
+    font-weight: 600;
+    font-size: 2.2rem;
+}
+
+
+/* NAV */
 
 .nav {
     min-height: 3rem;
@@ -18,4 +44,44 @@
 .nav__link {
     padding: 0 1rem;
     border-right: 1px solid rgba(20, 22, 25, 0.08);
+    text-transform: uppercase;
+    font-weight: 600;
+    color: var(--primary-text-color);
+    font-size: 1.2rem;
+    letter-spacing: 0.7px;
 }
+
+/* LESSON */
+
+.module {
+    padding: 1rem;
+    background-color: var(--light-blue);
+    border-radius: var(--border-radius);
+    display: flex;
+    gap: 4rem;
+}
+
+.goal {
+    counter-increment: item;
+    margin: 1rem 0;
+}
+
+.goal:before {
+    background-color: rgba(243, 245, 247, 0.94);
+    border-radius: 3px;
+    content: counter(item);
+    width: 24px;
+    height: 24px;
+    display: inline-block;
+    text-align: center;
+    line-height: 24px;
+    margin-right: 1rem;
+}
+
+.module__number:before {
+    content:'';
+    width: 2rem;
+    height: 2px;
+    background-color: var(--primary-text-color);
+}
+
