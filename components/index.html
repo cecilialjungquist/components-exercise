@@ -13,12 +13,12 @@
 <body>
     <nav class="nav">
         <a class="nav__link" href="#">Planering</a>
-        <a class="nav__link" href="#">Dashboard</a>
+        <a class="nav__link" href="../view/index.html">Dashboard</a>
         <a class="nav__link" href="#">Kursvy</a>
         <a class="nav__link" href="#">Bedömning</a>
     </nav>
 
-    <header class="module">
+    <header class="module__header">
         <aside class="module__label">
             <h2 class="module__number">01</h2>
             <h3>2 studiedagar</h3>
@@ -66,7 +66,7 @@
     <section class="slider-self-assessment">
         <h4>Lorem ipsum dolor sit amet consectetur.</h4>
         <div class="slider">
-            <p class="slider__p">förstår inte</p><div class="toggle toggle--slider"><div class="toggle__circle toggle__circle--slider"></div></div><p class="slider__p">förstår allt</p>
+            <p class="slider__p">förstår inte</p><input type="range" name="self-assessment" id="self-assessment"><p class="slider__p">förstår allt</p>
         </div>
     </section>
 
@@ -74,17 +74,30 @@
         <p class="module__goal__p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates, nesciunt?</p>
     </section>
 
-        <article class="module module--purple">
+    <section class="module__link">
+        <img src="../img/document-outline.svg" alt="">
+        <p class="module__link__p">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+    </section>
+
+        <article class="lesson">
             <aside class="module__label">
                 <h2 class="module__number">1.2</h2>
-                <h4>3 okt. kl 09.00-16.00 @zocom</h4>
+                <figure class="when">
+                    <img class="when__fig" src="../img/calendar-outline.svg" alt="">
+                    <figcaption class="when__info"><span class="when__time"><em class="when__date">3 okt.</em> 09.00-16.00 <br> </span>
+                    @zocom</figcaption>
+                </figure>
             </aside>
-            <section class="module__overview module__overview--purple">
+
+            <section class="module__overview module__overview--lesson">
                 <h2 class="overview__heading">Tillgänglighet - en grundläggande rättighet</h2>
+                
                 <section class="module__goal">
                     <p class="module__goal__p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates, nesciunt?</p>
                 </section>
+                
                 <p>Responsive web design agile development funding MVP alpha channels. User experience beta branding supply chain social proof scrum project ramen influencer hypotheses termsheet.</p>
+                
                 <section class="self-assessment">
                    <ul class="self-assessment__options">
                        <li class="self-assessment__option border-right">ej påbörjat</li>
@@ -95,5 +108,6 @@
                </section>
             </section>    
         </article>
+
 </body>
 </html>
