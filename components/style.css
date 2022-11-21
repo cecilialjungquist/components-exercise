@@ -71,7 +71,7 @@ figcaption {
     letter-spacing: 0.7px;
 }
 
-/* LESSON */
+/* MODULE */
 
 .module {
     padding: 1.6rem;
@@ -113,8 +113,11 @@ figcaption {
 
 /* SELF ASSESSMENT */
 
+.self-assessment {
+    padding: 1rem 0;
+}
+
 .self-assessment__options {
-    background-color: var(--primary-bg-color);
     width: fit-content;
     border: 0.5px solid var(--primary-text-color);
     overflow: hidden;
@@ -225,4 +228,56 @@ figcaption {
     display: flex;
     align-items: center;
     gap: 1.8rem;
+}
+
+/* SLIDER SELF-ASSESSMENT */
+
+.slider-self-assessment {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.slider {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.slider__p {
+    font-size: 1.2rem;
+}
+
+.toggle--slider {
+    width: 30rem;
+    height: 1px;
+    padding: 0;
+    border: none;
+    justify-content: center;
+}
+
+.toggle__circle--slider {
+    background-color: var(--primary-text-color);
+}
+
+/* MODULE GOAL */
+
+.module__goal__p {
+    font-size: 1.2rem;
+    background-color: rgba(20, 22, 25, 0.08);
+    border-radius: 4px;
+    width: fit-content;
+    padding: .5rem 1rem;
+}
+
+/* LESSON */
+
+.module--purple {
+    background-color: #E0D6FF;
+}
+
+.module__overview--purple {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
 }
