@@ -8,10 +8,15 @@
     font-size: 1.6rem;
 }
 
+body > * {
+    margin: 3rem;
+}
+
 :root {
     font-size: 62.5%;
 
     --primary-text-color: #141619;
+    --primary-bg-color: #F5F5F5;
     --light-blue: #E6EBF3;
     --purple:  #E0D6FF;
 
@@ -28,12 +33,27 @@ h3 {
     font-size: 2.2rem;
 }
 
+h4 {
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+p {
+    font-size: 1.6rem;
+    font-weight: 400;
+}
+
+figcaption {
+    font-weight: 400;
+    font-size: 1.4rem;
+}
+
 
 /* NAV */
 
 .nav {
-    min-height: 3rem;
-    background-color: #F5F6FF;
+    min-height: 4.8rem;
+    background-color: var(--primary-bg-color);
     box-shadow: 0px 6px 16px rgba(0, 0, 0, 0.05);
     border-radius: 6px;
     display: flex;
@@ -42,7 +62,7 @@ h3 {
 }
 
 .nav__link {
-    padding: 0 1rem;
+    padding: 0 1.6rem;
     border-right: 1px solid rgba(20, 22, 25, 0.08);
     text-transform: uppercase;
     font-weight: 600;
@@ -54,34 +74,155 @@ h3 {
 /* LESSON */
 
 .module {
-    padding: 1rem;
+    padding: 1.6rem;
     background-color: var(--light-blue);
     border-radius: var(--border-radius);
     display: flex;
-    gap: 4rem;
+    gap: 6.3rem;
 }
 
 .goal {
     counter-increment: item;
-    margin: 1rem 0;
+    margin: 1.6rem 0;
 }
 
 .goal:before {
     background-color: rgba(243, 245, 247, 0.94);
     border-radius: 3px;
     content: counter(item);
-    width: 24px;
-    height: 24px;
+    width: 2.4rem;
+    height: 2.4rem;
     display: inline-block;
     text-align: center;
-    line-height: 24px;
-    margin-right: 1rem;
+    line-height: 2.4rem;
+    margin-right: 1.6rem;
+}
+
+.module__number {
+    position: relative;
 }
 
 .module__number:before {
-    content:'';
-    width: 2rem;
+    content:' ';
+    position: absolute;
+    bottom: 0;
+    width: 3.2rem;
     height: 2px;
     background-color: var(--primary-text-color);
 }
 
+/* SELF ASSESSMENT */
+
+.self-assessment__options {
+    background-color: var(--primary-bg-color);
+    width: fit-content;
+    border: 0.5px solid var(--primary-text-color);
+    overflow: hidden;
+    border-radius: 4px;
+    display: grid;
+    grid-template-columns: repeat(4, 14rem);
+}
+
+.self-assessment__option {
+    font-size: 1.2rem;
+    display: flex;
+    justify-content: center;
+    padding: .6rem 0;
+    cursor: pointer;
+}
+
+.border-right {
+    border-right: 0.5px solid var(--primary-text-color);
+}
+
+.self-assessment__option:hover {
+    background-color: rgba(20, 22, 25, 0.8);
+    color: var(--primary-bg-color);
+}
+
+/* COURSE CARD */
+
+.course-card {
+    width: 24.5rem;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+}
+
+.course-card__figure h4,
+.course-card__figure figcaption {
+    margin: 0 1.6rem;
+}
+
+.course-card__img {
+    height: 20rem;
+    background-color: #666A73;
+    margin-bottom: 1rem;
+}
+
+.course-card__nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1px;
+    margin: 1.6rem;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    margin-top: 4rem;
+}
+
+.card__link {
+    width: 100%;
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: 600;
+    padding: .5rem 0;
+    background-color: #ebecee;
+    color: var(--primary-text-color);
+}
+
+.card__link:hover {     /* Samma som assessment! Lägga ihop? */
+    background-color: rgba(20, 22, 25, 0.8);
+    color: var(--primary-bg-color);
+}
+
+/* BTN */
+
+.btn {
+    max-width: 60rem;
+    width: 100%;
+    border: none;
+    background-color: #EA4848;
+    border-radius: 4px;
+    color: rgba(255, 255, 255, 0.768);
+    padding: 1.6rem 2.4rem;
+    cursor: pointer;
+}
+
+/* TOGGLE */
+
+.toggle {
+    width: 4rem;
+    height: 2rem;
+    padding: 2px;
+    background-color: var(--primary-text-color);
+    border-radius: 4rem;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+.toggle__circle {
+    width: 1.6rem;
+    height: 1.6rem;
+    border-radius: 50%;
+    background-color: var(--primary-bg-color);
+    cursor: pointer;
+}
+
+/* CLOSE FINISHED ACTIVITIES */
+
+.close-finished-activities {
+    display: flex;
+    align-items: center;
+    gap: 1.8rem;
+}
