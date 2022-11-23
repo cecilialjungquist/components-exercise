@@ -13,23 +13,24 @@ body > * {
 }
 
 body {
-    background: #3a3a3a;
+    background: #8a95ae;
 }
 
 :root {
     font-size: 62.5%;
 
-    --primary-text-dark: #141619;
-    --secondary-text-dark: rgba(20, 22, 25, 0.72);
-    --primary-text-light: rgba(243, 245, 247, 0.94);
-    --secondary-text-light: rgba(243, 245, 247, 0.72);
+    --primary-text-dark: #141619;                       /* darker */
+    --secondary-text-dark: rgba(20, 22, 25, 0.72);      /* lighter */
+    --primary-text-light: rgba(243, 245, 247, 0.94);    /* lighter */
+    --secondary-text-light: rgba(243, 245, 247, 0.72);  /* darker */
 
-    --foreground-layer-light: #F5F5F5; /* nav, background course card */
+    --foreground-layer-light: #F5F5F5;                  /* nav, background course card */
     --foreground-layer-neutral: #666A73;
-    --container-layer-ash: #E6EBF3; /* lesson-header */
-    --container-layer-purple:  #E0D6FF; /* lesson */
-    --shade-dark-80: rgba(20, 22, 25, 0.8);
-    --shade-dark-8: rgba(20, 22, 25, 0.08);
+    --container-layer-ash: #E6EBF3;                     /* lesson-header */
+    --container-layer-purple:  #E0D6FF;                 /* lesson */
+    --shade-dark-80: rgba(20, 22, 25, 0.8);             /* darker */
+    --shade-dark-8: rgba(20, 22, 25, 0.08);             /* lighter */
+    --shade-light-80: rgba(243, 245, 246, 0.8);
     --accent-red: #EA4848;
 
     --border-radius: 6px;
@@ -58,7 +59,11 @@ h2 {        /* ta bort denna?? */
     color: var(--primary-text-dark);
     font-size: 3.0rem;
     font-weight: 600;
-    line-height: 2.56rem;
+    line-height: 3.9rem;
+}
+
+.h2--lighter {
+    color: var(--secondary-text-dark);
 }
 
 h3 {        /* ta bort denna?? */
@@ -70,7 +75,7 @@ h3 {        /* ta bort denna?? */
 .h3 {
     font-weight: 600;
     font-size: 2.2rem;
-    line-height: 3.08px;
+    line-height: 3.08rem;
 }
 
 h4 {
@@ -100,6 +105,10 @@ p {
     font-size: 1.2rem;
     font-weight: 600;
     line-height: 1.8rem;
+}
+
+.card-p--lighter {
+    color: var(--secondary-text-dark);
 }
 
 figcaption {
@@ -138,7 +147,7 @@ em {
     border-radius: var(--border-radius);
 }
 
-/* NAV */
+/* -.-.-.-.-.- NAV -.-.-.-.-.- */
 
 .nav {
     min-height: 4.8rem;
@@ -161,33 +170,24 @@ em {
     line-height: 1.56rem;
 }
 
-/* MODULE */
-
-.module__title {        /* Finns denna? */
-    color: var(--primary-text-dark);
-}
+/* -.-.-.-.-.- LESSON-HEADER -.-.-.-.-.- */
 
 .lesson-header {
+    max-width: 768px;
     padding: 1.6rem;
     background-color: var(--container-layer-ash);
     border-radius: var(--border-radius);
-    display: flex;
+    display: grid;
+    grid-template-columns: 16rem auto;
+    gap: 3.2rem;
 }
 
-.module {
-    flex: 1;
-}
-
-.module__overview {
-    flex: 3;
-}
-
-.goal {
+.lesson-outcome {
     counter-increment: item;
     margin: 1.6rem 0;
 }
 
-.goal::before {
+.lesson-outcome::before {
     background-color: var(--foreground-layer-light);
     border-radius: 3px;
     content: counter(item);
@@ -206,8 +206,14 @@ em {
     padding-bottom: 1.2rem;
 }
 
+.module__number--lighter {
+    width: fit-content;
+    border-bottom: 1.5px solid var(--secondary-text-dark);
+    margin-bottom: 2rem;
+    padding-bottom: 1.2rem;
+}
 
-/* SELF ASSESSMENT */
+/* -.-.-.- ACTIVITY-SELF-ASSESMENT -.-.-.- */
 
 .activity-self-assessment {
     padding: 1rem 0;
@@ -220,7 +226,7 @@ em {
     overflow: hidden;
     border-radius: 4px;
     display: grid;
-    grid-template-columns: repeat(4, 14rem);
+    grid-template-columns: repeat(4, 12rem);
 }
 
 .self-assessment__option {
@@ -239,7 +245,7 @@ em {
     color: var(--primary-text-light);
 }
 
-/* COURSE CARD */
+/* -.-.-.-.- COURSE CARD -.-.-.-.- */
 
 .course-card {
     width: 24.5rem;
@@ -264,76 +270,73 @@ em {
     gap: 1px;
     border-radius: var(--border-radius);
     overflow: hidden;
-    margin-top: 2rem;
+    margin-top: 4.4rem;
 }
 
 .card__link {
     width: 100%;
     text-align: center;
-    font-size: 1.2rem;
-    font-weight: 600;
-    padding: .5rem 0;
-    background-color: #ebecee;
-    color: var(--primary-text-color);
+    padding: .4rem 0;
+    background-color: var(--shade-dark-8);
+    color: var(--secondary-text-dark);
 }
 
 .card__link:hover {     /* Samma som assessment! Lägga ihop? */
-    background-color: rgba(20, 22, 25, 0.8);
-    color: var(--primary-bg-color);
+    background-color: var(--shade-dark-80);
+    color: var(--primary-text-light);
 }
 
-/* BTN */
+/* -.-.-.-.-.-.-.- BTN -.-.-.-.-.-.-.- */
 
 .btn {
     max-width: 60rem;
     width: 100%;
     border: none;
-    background-color: #EA4848;
+    background-color: var(--accent-red);
     border-radius: 4px;
-    color: rgba(255, 255, 255, 0.768);
+    color: var(--secondary-text-light);
     padding: 1.6rem 2.4rem;
     margin: 2rem 0;
     cursor: pointer;
 }
 
-/* TOGGLE */
+/* -.-.-.- TOGGLE-DONE -.-.-.- */
 
-.toggle {
+.toggle-done {
+    display: flex;
+    align-items: center;
+    gap: 1.8rem;
+}
+
+.toggle-done__track {
     width: 4rem;
     height: 2rem;
     padding: 2px;
-    background-color: var(--primary-text-color);
+    background-color: var(--primary-text-dark);
     border-radius: 4rem;
     display: flex;
     justify-content: end;
     align-items: center;
 }
 
-.toggle__circle {
+.toggle-done__thumb {
     width: 1.6rem;
     height: 1.6rem;
     border-radius: 50%;
-    background-color: var(--primary-bg-color);
+    background-color: var(--primary-text-light);
     cursor: pointer;
 }
 
-/* CLOSE FINISHED ACTIVITIES */
-
-.close-finished-activities {
-    display: flex;
-    align-items: center;
-    gap: 1.8rem;
-}
-
-/* SLIDER SELF-ASSESSMENT */
+/* -.-.- SLIDER-SELF-ASSESSMENT -.-.- */
 
 .slider-self-assessment {
+    max-width: 544px;
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    background-color: var(--primary-bg-color);
-    padding: 2rem;
-    border-radius: var(--border-radius);
+    background-color: var(--shade-light-80);
+    padding: 1.6rem;
+    border-radius: 4px;
     margin: 1rem 0;
 }
 
@@ -365,49 +368,22 @@ input[type="range"]::-webkit-slider-thumb {
     height: 1.6rem;
     width: 1.6rem;
     border-radius: 50%;
-    margin-top: -.65rem;
+    margin-top: -.7rem;
 }
 
 
-/* MODULE GOAL */
+/* -.-.-.-.-.- MODULE GOAL -.-.-.-.-.- */
 
-.module__goal__p {
-    font-size: 1.2rem;
-    background-color: rgba(20, 22, 25, 0.08);
+.module-goal {
+    background-color: var(--shade-dark-8);
     border-radius: 4px;
     width: fit-content;
     padding: .5rem 1rem;
 }
 
-/* LESSON */
+/* -.-.-.-.-.-.- LINK -.-.-.-.-.-.- */
 
-.lesson {
-    padding: 1.6rem;
-    background-color: #E0D6FF;
-    border-radius: var(--border-radius);
-    display: flex;
-}
-
-.module__overview--lesson {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-}
-
-.when__info {
-    line-height: 1.6rem;
-}
-.when {
-    display: flex;
-    gap: 1rem;
-}
-.when__time {
-    font-size: 1.4rem;
-}
-
-/* MODULE LINK */
-
-.module__link__wrapper {
+.link__wrapper {
     display: flex;
     flex-direction: column;
     gap: .3rem;
@@ -415,11 +391,54 @@ input[type="range"]::-webkit-slider-thumb {
     overflow: hidden;
 }
 
-.module__link {
+.link {
     display: flex;
     gap: 1rem;
-    background-color: rgba(20, 22, 25, 0.08);
+    background-color: var(--shade-dark-8);
     padding: .5em 1em;
+}
+
+
+/* LESSON */
+
+.lesson {
+    max-width: 768px;
+    padding: 1.6rem;
+    background-color: var(--container-layer-purple);
+    border-radius: var(--border-radius);
+    display: grid;
+    grid-template-columns: 18rem auto;
+    gap: 3.2rem;
+}
+
+.module__overview {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+/* SCHEDULE */
+
+.schedule {
+    display: flex;
+    gap: 1rem;
+}
+
+.schedule__date {
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+
+.schedule__time {
+    font-size: 1.4rem;
+    font-weight: 500;
+}
+
+.schedule__address {
+    font-style: normal;
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-top: -.8em;
 }
 
 /* BACKGROUND COLOR UTILITY CLASSES */

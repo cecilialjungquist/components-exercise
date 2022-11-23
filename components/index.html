@@ -11,6 +11,8 @@
     <title>Document</title>
 </head>
 <body>
+
+    <!-- NAV -->
     <nav class="nav">
         <a class="nav__link" href="#">Planering</a>
         <a class="nav__link" href="../view/index.html">Dashboard</a>
@@ -18,6 +20,7 @@
         <a class="nav__link" href="#">Bedömning</a>
     </nav>
 
+    <!-- LESSON-HEADER -->
     <header class="lesson-header">
         <aside class="module">
             <h2 class="h2 module__number">01</h2>
@@ -26,12 +29,13 @@
         <section class="module__overview">
             <h2 class="h2">Mål med modul</h2>
             <ol>
-                <li class="goal main-p">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quibusdam, nihil.</li>
-                <li class="goal main-p">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quibusdam, nihil</li>
+                <li class="lesson-outcome main-p">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quibusdam, nihil.</li>
+                <li class="lesson-outcome main-p">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quibusdam, nihil</li>
             </ol>
         </section>
     </header>
 
+    <!-- ACTIVITY-SELF-ASSESMENT -->
     <section class="activity-self-assessment">
         <ul class="self-assessment__options">
             <li class="self-assessment__option border-right card-p">ej påbörjat</li>
@@ -41,28 +45,31 @@
         </ul>
     </section>
 
+    <!-- COURSE-CARD -->
     <article class="course-card">
         <div class="course-card__color"></div>
         <section class="course-card__info">
             <h4 class="h4">En awesome kurs i grejer</h4>
             <figcaption class="figcaption">med Lärare Lärarsson</figcaption>
             <nav class="course-card__nav">
-                <a class="card__link" href="#">Planera</a>
-                <a class="card__link" href="#">Kursvy</a>
-                <a class="card__link" href="#">Översikt</a>
-                <a class="card__link" href="#">Bedömning</a>
+                <a class="card__link card-p" href="#">Planera</a>
+                <a class="card__link card-p" href="#">Kursvy</a>
+                <a class="card__link card-p" href="#">Översikt</a>
+                <a class="card__link card-p" href="#">Bedömning</a>
             </nav>
         </section>
     </article>
 
-    <button class="btn"><h4>Ok, klar!</h4></button>
+    <!-- BTN -->
+    <button class="btn"><h4 class="h4">Ok, klar!</h4></button>
 
-    <section class="close-finished-activities">
-             <!-- TOGGLE -->
-            <div class="toggle"><div class="toggle__circle"></div></div>
-            <p>Fäll ihop avklarade Moduler och Aktiviteter</p>
+    <!-- TOGGLE-DONE -->
+    <section class="toggle-done">
+        <div class="toggle-done__track"><div class="toggle-done__thumb"></div></div>
+        <p class="main-p">Fäll ihop avklarade Moduler och Aktiviteter</p>
     </section>
 
+    <!-- SLIDER-SELF-ASSESSMENT-->
     <section class="slider-self-assessment">
         <h4>Lorem ipsum dolor sit amet consectetur.</h4>
         <div class="slider">
@@ -70,44 +77,70 @@
         </div>
     </section>
 
-    <section class="module__goal">
-        <p class="module__goal__p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates, nesciunt?</p>
+    <!-- MODULE-GOAL -->
+    <section class="module-goal">
+        <p class="card-p card-p--lighter">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates, nesciunt?</p>
     </section>
 
-    <section class="module__link">
-        <img src="../img/document-outline.svg" alt="">
-        <p class="module__link__p">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+    <!-- LINK -->
+    <section class="link__wrapper">
+        <section class="link">
+            <img src="../img/document-outline.svg" alt="">
+            <p class="figcaption">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        </section>
+        <section class="link">
+            <img src="../img/videocam-outline.svg" alt="">
+            <p class="figcaption">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        </section>
     </section>
 
-        <article class="lesson">
-            <aside class="label">
-                <h2 class="label__number">1.2</h2>
-                <figure class="when">
-                    <img class="when__fig" src="../img/calendar-outline.svg" alt="">
-                    <figcaption class="when__info"><span class="when__time"><em class="when__date">3 okt.</em> 09.00-16.00 <br> </span>
-                    @zocom</figcaption>
-                </figure>
-            </aside>
-
-            <section class="module__overview module__overview--lesson">
-                <h2 class="overview__heading">Tillgänglighet - en grundläggande rättighet</h2>
-                
-                <section class="module__goal">
-                    <p class="module__goal__p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates, nesciunt?</p>
+    <!-- LESSON -->
+    <article class="lesson">
+            <aside class="module">
+                <h2 class="h2 h2--lighter module__number--lighter">1.2</h2>
+                <!-- SCHEDULE -->
+                <section class="schedule">
+                    <img src="../img/calendar-outline.svg" alt="Icon of calendar.">
+                    <section class="card-p--lighter">
+                        <time class="schedule__date" datetime="2022-10-03">9 okt.</time>
+                        <time class="schedule__time" datetime="08:00+01:00">9.00-16.00</time>
+                        <address class="schedule__address card-p--lighter">@zocom</address>
+                    </section>
                 </section>
+            </aside>
+            <section class="module__overview">
+                <h2 class="h2 h2--lighter">Tillgänglighet - en grundläggande rättighet</h2>
                 
-                <p>Responsive web design agile development funding MVP alpha channels. User experience beta branding supply chain social proof scrum project ramen influencer hypotheses termsheet.</p>
+                <!-- MODULE-GOAL -->
+                <section class="module-goal">
+                    <p class="card-p card-p--lighter">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates, nesciunt?</p>
+                </section>
+                <p class="main-p">Responsive web design agile development funding MVP alpha channels. User experience beta branding supply chain social proof scrum project ramen influencer hypotheses termsheet.</p>
                 
-                <section class="self-assessment">
-                   <ul class="self-assessment__options">
-                       <li class="self-assessment__option border-right">ej påbörjat</li>
-                       <li class="self-assessment__option border-right">förstår ej</li>
-                       <li class="self-assessment__option border-right">förstår delvis</li>
-                       <li class="self-assessment__option">förstår helt</li>
-                   </ul>
-               </section>
-            </section>    
-        </article>
+                <!-- LINK -->
+                <section class="link__wrapper">
+                    <section class="link">
+                        <img src="../img/document-outline.svg" alt="">
+                        <p class="figcaption">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    </section>
+                    <section class="link">
+                        <img src="../img/videocam-outline.svg" alt="">
+                        <p class="figcaption">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    </section>
+                </section>
+
+                <!-- ACTIVITY-SELF-ASSESMENT -->
+                <section class="activity-self-assessment">
+                    <ul class="self-assessment__options">
+                        <li class="self-assessment__option border-right card-p">ej påbörjat</li>
+                        <li class="self-assessment__option border-right card-p">förstår ej</li>
+                        <li class="self-assessment__option border-right card-p">förstår delvis</li>
+                        <li class="self-assessment__option card-p">förstår helt</li>
+                    </ul>
+                </section>
+            </section>
+
+    </article>
 
 </body>
 </html>
