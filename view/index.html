@@ -12,17 +12,22 @@
 </head>
 <body>
     <div class="wrapper">
+        
+        <!-- PAGE-HEADER -->
+        <header class="page-header">
+            <section>
+                <h1 class="h1 h1--huge">Tillgänglighet grund <span class="yhp">30yhp</span></h1>
+                <time class="h2 h2--lighter h1__date" datetime="2022-10-03">3 okt - 5 nov</time>
+            </section>
 
-        <h1 class="title">Tillgänglighet grund <span>30yhp</span></h1>
-        <h2 class="title__date">3 okt - 5 nov</h2>
-    
-        <!-- NAV -->
-        <nav class="nav">
-            <a class="nav__link" href="#">Planering</a>
-            <a class="nav__link" href="../view/index.html">Dashboard</a>
-            <a class="nav__link" href="#">Kursvy</a>
-            <a class="nav__link" href="#">Bedömning</a>
-        </nav>
+            <!-- NAV -->
+            <nav class="nav">
+                <a class="nav__link" href="#">Planering</a>
+                <a class="nav__link" href="../view/index.html">Dashboard</a>
+                <a class="nav__link" href="#">Kursvy</a>
+                <a class="nav__link" href="#">Bedömning</a>
+            </nav>
+        </header>
     
         <!-- TOGGLE-DONE -->
         <section class="toggle-done">
@@ -30,28 +35,31 @@
             <p class="main-p">Fäll ihop avklarade Moduler och Aktiviteter</p>
         </section>
     
-        <article class="module__wrapper">
-            <h2 class="module__title">1. Semantisk HTML</h2>
-    
-            <!-- LESSON-HEADER -->
-            <header class="lesson-header">
-                <aside class="module">
-                    <h2 class="h2 module__number">01</h2>
-                    <h3 class="h3">2 studiedagar</h3>
-                </aside>
-                <section class="module__overview">
-                    <h2 class="h2">Mål med modul</h2>
-                    <ol>
-                        <li class="lesson-outcome main-p">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quibusdam, nihil.</li>
-                        <li class="lesson-outcome main-p">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quibusdam, nihil</li>
-                    </ol>
-                </section>
-            </header>
+        <!-- MODULE-CONTAINER -->
+        <article class="module-container">
+            <section>
+                <h2 class="h2 module-title">1. Semantisk HTML</h2>
+        
+                <!-- LESSON-HEADER -->
+                <header class="lesson-header">
+                    <aside class="module">
+                        <h2 class="h2 module__number">01</h2>
+                        <h3 class="h3">2 studiedagar</h3>
+                    </aside>
+                    <section class="module__overview">
+                        <h2 class="h2">Mål med modul</h2>
+                        <ol>
+                            <li class="lesson-outcome main-p">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quibusdam, nihil.</li>
+                            <li class="lesson-outcome main-p">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quibusdam, nihil</li>
+                        </ol>
+                    </section>
+                </header>
+            </section>
     
             <!-- LESSON 1.1 -->
             <article class="lesson">
                 <aside class="module">
-                    <h2 class="h2 h2--lighter module__number--lighter">1.1</h2>
+                    <h2 class="h2 module__number">1.1</h2>
                     <!-- SCHEDULE -->
                     <section class="schedule">
                         <img src="../img/calendar-outline.svg" alt="Icon of calendar.">
@@ -67,7 +75,7 @@
                     
                     <!-- MODULE-GOAL -->
                     <section class="module-goal">
-                        <p class="card-p card-p--lighter">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates, nesciunt?</p>
+                        <p class="card-p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates, nesciunt?</p>
                     </section>
                     <p class="main-p">Responsive web design agile development funding MVP alpha channels. User experience beta branding supply chain social proof scrum project ramen influencer hypotheses termsheet.</p>
                     
@@ -96,7 +104,7 @@
             </article>
 
             <!-- LESSON 1.2 -->
-            <article class="lesson">
+            <article class="lesson lesson-purple">
                 <aside class="module">
                     <h2 class="h2 h2--lighter module__number--lighter">1.2</h2>
                     <!-- SCHEDULE -->
@@ -143,7 +151,7 @@
             </article>
 
             <!-- LESSON 1.3 -->
-            <article class="lesson">
+            <article class="lesson lesson--blue">
                 <aside class="module">
                     <h2 class="h2 h2--lighter module__number--lighter">1.3</h2>
                     <!-- SCHEDULE -->
@@ -239,12 +247,8 @@
 
                     <!-- BTN -->
                     <button class="btn"><h4 class="h4">Ok, klar!</h4></button>
-
                 </section>
             </header>
-
-
-
         </article>
     </div>
     
