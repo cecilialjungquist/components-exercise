@@ -397,6 +397,17 @@ input[type="range"]::-webkit-slider-thumb {
     cursor: pointer;
 }
 
+/* ------------------------------------- */
+/* -.-.-.-.- NEW PAGE: COURSES -.-.-.-.- */
+/* ------------------------------------- */
+
+.courses {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 3.2rem;
+}
+
 /* -.-.-.-.- COURSE-CARD -.-.-.-.- */
 
 .course-card {
@@ -413,6 +424,10 @@ input[type="range"]::-webkit-slider-thumb {
 
 .course-card__info {
     padding: 1.6rem;
+    height: 22.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .course-card__nav {
@@ -422,7 +437,6 @@ input[type="range"]::-webkit-slider-thumb {
     gap: 1px;
     border-radius: var(--border-radius);
     overflow: hidden;
-    margin-top: 4.4rem;
 }
 
 .card__link {
@@ -437,4 +451,3 @@ input[type="range"]::-webkit-slider-thumb {
     background-color: var(--shade-dark-80);
     color: var(--primary-text-light);
 }
-
