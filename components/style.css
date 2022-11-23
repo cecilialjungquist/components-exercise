@@ -134,6 +134,18 @@ body {
     line-height: 1.56rem;
 }
 
+nav a:last-child {          /* Removes border on last child */
+    border-right: none;
+}
+
+.nav__link:hover {
+    font-weight: 700;
+}
+
+.nav__link--active {
+    font-weight: 700;
+}
+
 /* -.-.-.- TOGGLE-DONE -.-.-.- */
 
 .toggle-done {
