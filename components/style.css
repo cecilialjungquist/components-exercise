@@ -169,7 +169,7 @@ body {
     flex-direction: column;
     gap: 6.5rem;
     background-color: var(--foreground-layer-light); 
-    padding: 2rem 1rem;
+    padding: 1.6rem;
     border-radius: var(--border-radius);
 }
 
@@ -237,7 +237,7 @@ body {
     gap: 2rem;
 }
 
-.lesson-purple {
+.lesson--purple {
     background-color: var(--container-layer-purple);
 }
 
