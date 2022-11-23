@@ -125,11 +125,6 @@ figcaption {
     /* text-align: center; */
 }
 
-em {
-    font-style: normal;
-    font-weight: 700;
-}
-
 .wrapper {
     max-width: 800px;
     margin: 2rem auto;
@@ -296,7 +291,7 @@ em {
     border-radius: 4px;
     color: var(--secondary-text-light);
     padding: 1.6rem 2.4rem;
-    margin: 2rem 0;
+    margin-top: 1.6rem;
     cursor: pointer;
 }
 
