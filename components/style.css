@@ -303,6 +303,7 @@ nav a:last-child {          /* Removes border on last child */
 
 .link {
     display: flex;
+    align-items: center;
     gap: 1rem;
     background-color: var(--shade-dark-8);
     padding: .5em 1em;
@@ -368,7 +369,6 @@ input[type="range"] {
     width: 36rem;
     margin: auto;
 }
-
 input[type="range"]::-webkit-slider-runnable-track {
     appearance: none;
     background-color: #141619;
