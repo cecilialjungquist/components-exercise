@@ -56,10 +56,6 @@ body {
     line-height: 3.9rem;
 }
 
-.h2--lighter {
-    color: var(--secondary-text-dark);
-}
-
 .h3 {
     font-weight: 600;
     font-size: 2.2rem;
@@ -85,15 +81,15 @@ body {
     line-height: 1.8rem;
 }
 
-.card-p--lighter {
-    color: var(--secondary-text-dark);
-}
-
 .figcaption {
     font-weight: 400;
     font-size: 1.4rem;
     line-height: 1.8rem;
     color: var(--primary-text-dark);
+}
+
+.uc-color--secondary-text-dark {        /* Utility class for font color*/
+    color: var(--secondary-text-dark);
 }
 
 /* -.-.-.-.-.- PAGE-HEADER -.-.-.-.-.- */
@@ -334,7 +330,7 @@ nav a:last-child {          /* Removes border on last child */
     border-right: 0.5px solid var(--shade-dark-80);
 }
 
-.self-assessment__option:hover {
+.self-assessment__option:hover {        /* Samma som card-link! Lägga ihop? */
     background-color: var(--shade-dark-80);
     color: var(--primary-text-light);
 }
