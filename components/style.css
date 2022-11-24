@@ -39,6 +39,11 @@ body {
     margin: 2rem auto;
     display: flex;
     flex-direction: column;
+    gap: 3.2rem;
+}
+
+.wrapper--no-gap {
+    gap: 0;
 }
 
 /* -.-.-.-.-.- FONT STYLES -.-.-.-.-.- */
@@ -148,7 +153,7 @@ nav a:last-child {          /* Removes border on last child */
     display: flex;
     align-items: center;
     gap: 1.8rem;
-    margin: 6.5rem 0 3.2rem;
+    margin: 3.2rem 0;
 }
 
 .toggle-done__track {
